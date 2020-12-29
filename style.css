@@ -1,0 +1,485 @@
+:root{
+  --primary-color:#fff;
+  --secondary-color:#f0f0f0;
+  --third-color:#222;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif; 
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: 2.5px solid var(--primary-color);
+  color: #f0f0f0;
+  margin-top: 1rem;
+  padding: 10px 40px 10px 40px;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  height: 8vh;
+  position: fixed;
+  z-index: 4;
+  color: #f4f4f4;
+  transition: 750ms;
+}
+
+.black_header {
+  background: black;
+}
+
+#header_content {
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  opacity: 1;
+}
+
+#logo {
+  height: 8vh;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  
+
+}
+
+#logo h2 {
+  
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  
+  height: 8vh;
+}
+
+#navbar ul li {
+  padding: 5px 20px; /* Mezera mezi li */
+  
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+:target { /* Aby Navbar nepřekrýval prvek ke kterému vede link */
+  scroll-margin-top: 8.4vh;
+}
+
+/* FIRST PAGE */
+#first_page {
+  width: 100vw;
+  height: 100vh;
+
+  background: url("../img/hory6.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: top; 
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+#first_page::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 1; 
+	background: rgba(0,0,0, 0.6);
+}	
+
+.first_page_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first_page_text h2 {
+  color: var(--primary-color);
+  font-size: 4rem;
+  z-index: 2;
+}
+
+.first_page_text p {
+  color: var(--primary-color);
+  font-size: 2rem;
+  z-index: 2;
+}
+
+/* ABOUT ME */
+#about_me {
+  height: 92vh;
+  width: 100vw;
+  background: #fff;
+}
+
+#about_me_content {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about_me_content h2 {
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+#about_me_content img {
+  margin-bottom: 6vh;
+  max-height: 35vh;
+}
+
+#about_me_content p {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* WHAT I DO */
+#what_I_do {
+  height: 60vh;
+  background: var(--secondary-color);
+  display: flex;
+}
+
+#what_I_do_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  float:left;
+  text-align:center;
+  width:30%;
+  padding:10px;
+}
+
+.box img {
+  width:90px;
+  margin-bottom: 5vh;
+}
+
+.box h2 {
+  margin-bottom: 2vh;
+}
+
+
+/* PROJECTS INTRO */
+#projects_intro {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MY PROJECTS */
+#my_projects {
+  height: 270vh;
+}
+
+#project_1 {
+  height: 110vh;
+  background: var(--primary-color);
+}
+
+#project_1 .printscreens {
+  box-sizing: border-box;
+  position: relative;
+  height: 66vh;
+}
+
+#project_1 .img_lg {
+  position: absolute;
+  height: 66vh;
+  width: 67%; 
+  bottom: 0;
+  left: 0%;
+  z-index: 1;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.75);
+}
+
+#project_1 .img_md {
+  position: absolute;
+  max-width: 28%;
+  right: 13%;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.75);
+}
+
+#project_1 .img_sm {
+  position: absolute;
+  max-width: 17%;
+  right: 0%;
+  bottom: 0;
+  z-index: 3;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.75);
+}
+
+.info_box {
+  height: 40vh;
+  margin-top: 2rem;
+  background: var(--secondary-color);
+  padding: .5rem;
+}
+
+/* WEB NAME and BUTTONS */
+.webname {
+  height: 5vh;
+  text-align: center;
+}
+
+.webname h2 {
+  margin-top: 3vh;
+  padding: 0;
+  color: black;
+}
+
+
+/* DESCRIPTION */
+.description {
+  margin-top: 3vh;
+  height: 6vh;
+  color: var(--oxford-blue);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* TEXH BUTTONS */
+.tech_buttons ul {
+  margin-top: 4rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.tech_buttons li {
+  text-align: center;
+  width: 5vw;
+  padding: .6rem;
+  background: var(--third-color);
+  margin: .2rem;
+}
+
+.tech_buttons a {
+  letter-spacing: 1px;
+  color: var(--primary-color);  
+}
+
+/* PROJECT 2 */ 
+#project_2 {
+  background: var(--primary-color);
+  margin-top: 15vh;
+}
+
+.printscreens_2 {
+  box-sizing: border-box;
+  position: relative;
+  height: 80vh;
+}
+
+.printscreens_2 .img_big {
+  position: absolute;
+  max-width: 75%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.75);
+}
+
+.printscreens_2 .img_small {
+  position: absolute;
+  max-width: 43%;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.75);
+}
+
+
+
+/* RESUME */
+#resume {
+  position: relative;
+
+  height: 60vh;
+  background-image: url("../img/hory2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--primary-color);
+}
+
+#resume h2 {
+  z-index: 2;
+}
+
+#resume a {
+  z-index: 2;
+}
+
+
+#resume::after {
+  position: absolute;
+	content: '';
+	width: 100%; 
+	height: 100%; 
+	z-index: 1; 
+	background: rgba(0,0,0, 0.6);
+}	
+
+/* GET IN TOUCH */
+#get_in_touch {
+  height: 92vh;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#get_in_touch_content {
+  height: 57vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_text {
+  margin-bottom: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_text h2 {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.contact_text p {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+#form_box {
+  width: 60vw;
+  position: relative;
+}
+
+.input_field {
+  margin-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-name {
+  height: 4vh;
+}
+
+#form-email {
+  height: 4vh;
+}
+
+#form-message {
+  height: 14vh;
+}
+
+.btn_odeslat {
+  background: var(--third-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 10px 40px 10px 40px;
+  position: absolute;
+  right: 0;
+}
+
+/* FOOTER */
+#footer {
+  height: 35vh;
+  background: var(--third-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+#footer li {
+  height: 60px;
+  width: 60px;
+  border: 1px solid var(--primary-color);
+  margin: 3px;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  color: var(--primary-color);
+}
+
+.links a img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
